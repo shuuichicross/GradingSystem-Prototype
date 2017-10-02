@@ -1,9 +1,9 @@
 Project Lead: Richard Orilla
 ============================
 Development Members:
-1.
-2.
-3.
+1. JJJ
+2. AAA
+3. BBB
 4.
 5.
 6.
