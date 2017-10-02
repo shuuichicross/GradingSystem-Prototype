@@ -10,10 +10,6 @@ Development Members:
 6.Ello, Jairah Mae
 7. Palmera, Lolivy
 8.
-<<<<<<< HEAD
 9.Gem Harvey Pedida
 10.Jeff Langa
-9. Gem Harvey Pedida
-10.
->>>>>>> 88d4a005b0155c169b0b81871a9aefa8e0db382b
 11.Ma. Shedi Shynne F. Catagasan
