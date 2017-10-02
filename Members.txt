@@ -1,14 +1,20 @@
 Project Lead: Richard Orilla
 ============================
 Development Members:
+<<<<<<< HEAD
 1.
 2.
 3.Ederick Jim D. lipar
+=======
+1. James Kevin Avena
+2. AAA
+3. BBB
+>>>>>>> c4f47d63deec556fa2908f6f4c6b12ed7edaea06
 4.
 5.
 6.
-7.
+7. Palmera, Lolivy
 8.
-9.
+9.Gem Harvey Pedida
 10.
-11.
+11.Ma. Shedi Shynne F. Catagasan
