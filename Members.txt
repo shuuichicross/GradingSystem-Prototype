@@ -2,7 +2,11 @@ Project Lead: Richard Orilla
 ============================
 Development Members:
 <<<<<<< HEAD
+1. dequito
+=======
+<<<<<<< HEAD
 1.
+>>>>>>> 08b2e5407e926fb67f661f3870a1e096b22c387b
 2.
 3.Ederick Jim D. lipar
 =======
