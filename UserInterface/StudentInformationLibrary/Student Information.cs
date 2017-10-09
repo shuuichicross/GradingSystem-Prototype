@@ -7,21 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace UserInterface
+namespace StudentInformationLibrary
 {
-    public partial class MainMenu : Form
+    public partial class StudentInformation : Form
     {
-        public MainMenu()
+        public StudentInformation()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void lblName_Click(object sender, EventArgs e)
         {
 
         }
