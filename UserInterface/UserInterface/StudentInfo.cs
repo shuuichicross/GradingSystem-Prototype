@@ -15,5 +15,12 @@ namespace UserInterface
         {
             InitializeComponent();
         }
+
+        private void StudentInfo_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'gradingsystemDataSet.studentinfo' table. You can move, or remove it, as needed.
+            this.studentinfoTableAdapter.Fill(this.gradingsystemDataSet.studentinfo);
+
+        }
     }
 }
