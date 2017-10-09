@@ -155,13 +155,13 @@
             // subjectCodeDataGridViewTextBoxColumn
             // 
             this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "subjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "subjectCode";
+            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Subject Code";
             this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
             // 
             // gradeDataGridViewTextBoxColumn
             // 
             this.gradeDataGridViewTextBoxColumn.DataPropertyName = "grade";
-            this.gradeDataGridViewTextBoxColumn.HeaderText = "grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
             this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
             // 
             // StudentInfo
