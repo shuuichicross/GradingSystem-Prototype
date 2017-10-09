@@ -1,0 +1,14 @@
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\bin\Debug\StudentGradeImporter.exe
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\bin\Debug\StudentGradeImporter.pdb
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.Properties.Resources.resources
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.csproj.GenerateResource.Cache
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.exe
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.pdb
+C:\Users\Student\AppData\Local\Temporary Projects\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.importer.resources
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.exe
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.pdb
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\bin\Debug\StudentGradeImporter.exe
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\bin\Debug\StudentGradeImporter.pdb
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.importer.resources
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.Properties.Resources.resources
+C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.csproj.GenerateResource.Cache
