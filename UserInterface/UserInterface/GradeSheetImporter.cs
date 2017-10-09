@@ -9,19 +9,14 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    public partial class MainMenu : Form
+    public partial class GradeSheetImporter : Form
     {
-        public MainMenu()
+        public GradeSheetImporter()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void GradeSheetImporter_Load(object sender, EventArgs e)
         {
 
         }
