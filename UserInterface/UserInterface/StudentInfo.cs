@@ -9,21 +9,11 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    public partial class MainMenu : Form
+    public partial class StudentInfo : Form
     {
-        public MainMenu()
+        public StudentInfo()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
