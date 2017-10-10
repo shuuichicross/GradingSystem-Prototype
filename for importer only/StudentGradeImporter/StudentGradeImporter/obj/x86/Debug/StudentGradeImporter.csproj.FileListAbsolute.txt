@@ -12,3 +12,12 @@ C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\Stude
 C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.importer.resources
 C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.Properties.Resources.resources
 C:\Users\Student\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.exe
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.pdb
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\bin\Debug\StudentGradeImporter.exe
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\bin\Debug\StudentGradeImporter.pdb
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.addProfessor.resources
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.importer.resources
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.Properties.Resources.resources
+C:\Users\Admin\Desktop\project\GradingSystem-Prototype\for importer only\StudentGradeImporter\StudentGradeImporter\obj\x86\Debug\StudentGradeImporter.csproj.GenerateResource.Cache

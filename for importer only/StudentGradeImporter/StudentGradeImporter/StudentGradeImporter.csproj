@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addCourse.Designer.cs">
+      <DependentUpon>addCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addProfessor.Designer.cs">
+      <DependentUpon>addProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addSubject.Designer.cs">
+      <DependentUpon>addSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="importer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +72,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="addCourse.resx">
+      <DependentUpon>addCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addProfessor.resx">
+      <DependentUpon>addProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addSubject.resx">
+      <DependentUpon>addSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="importer.resx">
       <DependentUpon>importer.cs</DependentUpon>
     </EmbeddedResource>
