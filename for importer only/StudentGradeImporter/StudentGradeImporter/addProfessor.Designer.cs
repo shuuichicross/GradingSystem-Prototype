@@ -37,12 +37,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -105,7 +105,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(36, 294);
+            this.button1.Location = new System.Drawing.Point(43, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(164, 52);
             this.button1.TabIndex = 6;
@@ -139,6 +139,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(532, 388);
             this.panel1.TabIndex = 8;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(21, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(202, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "ADD PROFESSOR ";
             // 
             // panel2
             // 
@@ -177,16 +187,6 @@
             // 
             this.Column3.HeaderText = "Last Name";
             this.Column3.Name = "Column3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 25);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "ADD PROFESSOR ";
             // 
             // addProfessor
             // 
