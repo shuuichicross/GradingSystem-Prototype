@@ -154,6 +154,8 @@
             // 
             this.studentinfoTableAdapter.ClearBeforeFill = true;
             // 
+            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "Subject Code";
+s            this.gradeDataGridViewTextBoxColumn.HeaderText = "Grade";
             // StudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
