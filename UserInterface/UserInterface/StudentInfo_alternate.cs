@@ -9,12 +9,13 @@ using System.Windows.Forms;
 
 namespace UserInterface
 {
-    public partial class MainMenu : Form
+    public partial class StudentInfo_alternate : Form
     {
-        public MainMenu()
+        MainMenu parent;
+        public StudentInfo_alternate(MainMenu parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
-
     }
 }

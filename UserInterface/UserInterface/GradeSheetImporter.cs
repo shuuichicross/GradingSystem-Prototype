@@ -15,10 +15,5 @@ namespace UserInterface
         {
             InitializeComponent();
         }
-
-        private void GradeSheetImporter_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="gradingsystemDataSet" targetNamespace="http://tempuri.org/gradingsystemDataSet.xsd" xmlns:mstns="http://tempuri.org/gradingsystemDataSet.xsd" xmlns="http://tempuri.org/gradingsystemDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gradingsystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="gradingsystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UserInterface.Properties.Settings.GlobalReference.Default.gradingsystemConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="professorTableAdapter" GeneratorDataComponentClassName="professorTableAdapter" Name="professor" UserDataComponentName="professorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="gradingsystemConnectionString (Settings)" DbObjectName="gradingsystem.professor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `profFirstName`, `profMiddleInitial`, `profLastName` FROM `professor`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="profFirstName" DataSetColumn="profFirstName" />
+              <Mapping SourceColumn="profMiddleInitial" DataSetColumn="profMiddleInitial" />
+              <Mapping SourceColumn="profLastName" DataSetColumn="profLastName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="gradingsystemDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="gradingsystemDataSet" msprop:Generator_UserDSName="gradingsystemDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="professor" msprop:Generator_TableClassName="professorDataTable" msprop:Generator_TableVarName="tableprofessor" msprop:Generator_TablePropName="professor" msprop:Generator_RowDeletingName="professorRowDeleting" msprop:Generator_RowChangingName="professorRowChanging" msprop:Generator_RowEvHandlerName="professorRowChangeEventHandler" msprop:Generator_RowDeletedName="professorRowDeleted" msprop:Generator_UserTableName="professor" msprop:Generator_RowChangedName="professorRowChanged" msprop:Generator_RowEvArgName="professorRowChangeEvent" msprop:Generator_RowClassName="professorRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="profFirstName" msprop:Generator_ColumnVarNameInTable="columnprofFirstName" msprop:Generator_ColumnPropNameInRow="profFirstName" msprop:Generator_ColumnPropNameInTable="profFirstNameColumn" msprop:Generator_UserColumnName="profFirstName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="profMiddleInitial" msprop:Generator_ColumnVarNameInTable="columnprofMiddleInitial" msprop:Generator_ColumnPropNameInRow="profMiddleInitial" msprop:Generator_ColumnPropNameInTable="profMiddleInitialColumn" msprop:Generator_UserColumnName="profMiddleInitial" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="profLastName" msprop:Generator_ColumnVarNameInTable="columnprofLastName" msprop:Generator_ColumnPropNameInRow="profLastName" msprop:Generator_ColumnPropNameInTable="profLastNameColumn" msprop:Generator_UserColumnName="profLastName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
