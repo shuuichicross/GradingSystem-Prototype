@@ -22,5 +22,12 @@ namespace UserInterface
             this.studentinfoTableAdapter.Fill(this.gradingsystemDataSet.studentinfo);
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
     }
 }

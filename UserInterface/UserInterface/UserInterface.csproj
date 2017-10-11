@@ -38,8 +38,13 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,6 +60,11 @@
     </Compile>
     <Compile Include="GradeSheetImporter.Designer.cs">
       <DependentUpon>GradeSheetImporter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gradingsystemDataSet.Designer.cs">
+      <DependentUpon>gradingsystemDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -89,6 +99,17 @@
     <EmbeddedResource Include="StudentInfo.resx">
       <DependentUpon>StudentInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="gradingsystemDataSet.xsc">
+      <DependentUpon>gradingsystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="gradingsystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>gradingsystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="gradingsystemDataSet.xss">
+      <DependentUpon>gradingsystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

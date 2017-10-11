@@ -50,11 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="gradingsystemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>gradingsystemDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Information.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -62,31 +57,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Student Information.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Student Information.Designer.cs">
-      <DependentUpon>Student Information.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Student Information.resx">
-      <DependentUpon>Student Information.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="gradingsystemDataSet.xsc">
-      <DependentUpon>gradingsystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="gradingsystemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>gradingsystemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="gradingsystemDataSet.xss">
-      <DependentUpon>gradingsystemDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

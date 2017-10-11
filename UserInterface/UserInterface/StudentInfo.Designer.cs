@@ -33,22 +33,21 @@
             this.studentinfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studentinfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gradingsystemDataSet = new UserInterface.gradingsystemDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLoad = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.gradingsystemDataSet = new UserInterface.gradingsystemDataSet();
-            this.studentinfoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.studentinfoTableAdapter = new UserInterface.gradingsystemDataSetTableAdapters.studentinfoTableAdapter();
-            this.subjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gradeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.studentinfoBindingSource)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gradingsystemDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentinfoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gradingsystemDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -75,9 +74,9 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,9 +89,30 @@
             this.dataGridView1.Size = new System.Drawing.Size(312, 190);
             this.dataGridView1.TabIndex = 5;
             // 
+            // subjectCodeDataGridViewTextBoxColumn
+            // 
+            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "subjectCode";
+            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "subjectCode";
+            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
+            // 
+            // gradeDataGridViewTextBoxColumn
+            // 
+            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "grade";
+            this.gradeDataGridViewTextBoxColumn.HeaderText = "grade";
+            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
+            // 
+            // studentinfoBindingSource1
+            // 
+            this.studentinfoBindingSource1.DataMember = "studentinfo";
+            this.studentinfoBindingSource1.DataSource = this.gradingsystemDataSet;
+            // 
+            // gradingsystemDataSet
+            // 
+            this.gradingsystemDataSet.DataSetName = "gradingsystemDataSet";
+            this.gradingsystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnLoad);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Controls.Add(this.label2);
@@ -102,15 +122,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(336, 87);
             this.panel1.TabIndex = 8;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(223, 14);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(87, 22);
-            this.btnLoad.TabIndex = 2;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.UseVisualStyleBackColor = true;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblName
             // 
@@ -138,31 +150,9 @@
             this.txtID.Size = new System.Drawing.Size(110, 20);
             this.txtID.TabIndex = 1;
             // 
-            // gradingsystemDataSet
-            // 
-            this.gradingsystemDataSet.DataSetName = "gradingsystemDataSet";
-            this.gradingsystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // studentinfoBindingSource1
-            // 
-            this.studentinfoBindingSource1.DataMember = "studentinfo";
-            this.studentinfoBindingSource1.DataSource = this.gradingsystemDataSet;
-            // 
             // studentinfoTableAdapter
             // 
             this.studentinfoTableAdapter.ClearBeforeFill = true;
-            // 
-            // subjectCodeDataGridViewTextBoxColumn
-            // 
-            this.subjectCodeDataGridViewTextBoxColumn.DataPropertyName = "subjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.HeaderText = "subjectCode";
-            this.subjectCodeDataGridViewTextBoxColumn.Name = "subjectCodeDataGridViewTextBoxColumn";
-            // 
-            // gradeDataGridViewTextBoxColumn
-            // 
-            this.gradeDataGridViewTextBoxColumn.DataPropertyName = "grade";
-            this.gradeDataGridViewTextBoxColumn.HeaderText = "grade";
-            this.gradeDataGridViewTextBoxColumn.Name = "gradeDataGridViewTextBoxColumn";
             // 
             // StudentInfo
             // 
@@ -177,10 +167,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.studentinfoBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.studentinfoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gradingsystemDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gradingsystemDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentinfoBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,7 +182,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtID;
