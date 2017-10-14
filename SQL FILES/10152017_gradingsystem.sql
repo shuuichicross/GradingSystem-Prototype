@@ -28,8 +28,9 @@ CREATE TABLE `course` (
   `courseID` int(11) NOT NULL AUTO_INCREMENT,
   `courseName` varchar(40) DEFAULT NULL,
   `courseMaxYears` int(11) DEFAULT NULL,
-  PRIMARY KEY (`courseID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`courseID`),
+  UNIQUE KEY `courseName_UNIQUE` (`courseName`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +39,7 @@ CREATE TABLE `course` (
 
 LOCK TABLES `course` WRITE;
 /*!40000 ALTER TABLE `course` DISABLE KEYS */;
-INSERT INTO `course` VALUES (3,'BSIT',4),(4,'BSA',4);
+INSERT INTO `course` VALUES (1,'BS ARCHITECTURE',5),(2,'BS INFORMATION TECHNOLOGY',4),(3,'BS Criminology',4),(4,'BS Accountancy',5),(5,'BS HRM',4);
 /*!40000 ALTER TABLE `course` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -87,7 +88,7 @@ CREATE TABLE `professor` (
   `profMiddleInitial` varchar(6) DEFAULT NULL,
   `profLastName` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`profID`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,23 +97,9 @@ CREATE TABLE `professor` (
 
 LOCK TABLES `professor` WRITE;
 /*!40000 ALTER TABLE `professor` DISABLE KEYS */;
-INSERT INTO `professor` VALUES (4,'Gem Harvey','O.','Pedida'),(5,'Dummy','D.','Dummy'),(6,'Richard Louie','T.','Orilla'),(7,'Magnolia','A.','Raz');
+INSERT INTO `professor` VALUES (1,'Lady','L','Gaga'),(2,'Michael','J','Jackson'),(3,'Korina','S','Sanchez'),(4,'Britney','S','Spears'),(5,'Kevin','D','Durant'),(6,'Gloria','M','Arroyo');
 /*!40000 ALTER TABLE `professor` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Temporary view structure for view `professorlist`
---
-
-DROP TABLE IF EXISTS `professorlist`;
-/*!50001 DROP VIEW IF EXISTS `professorlist`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE VIEW `professorlist` AS SELECT 
- 1 AS `First Name`,
- 1 AS `Middle Initial`,
- 1 AS `Last Name`*/;
-SET character_set_client = @saved_cs_client;
 
 --
 -- Table structure for table `student`
@@ -131,7 +118,7 @@ CREATE TABLE `student` (
   PRIMARY KEY (`studentID`),
   KEY `courseTakenID` (`courseTakenID`),
   CONSTRAINT `student_ibfk_1` FOREIGN KEY (`courseTakenID`) REFERENCES `course` (`courseID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -140,6 +127,7 @@ CREATE TABLE `student` (
 
 LOCK TABLES `student` WRITE;
 /*!40000 ALTER TABLE `student` DISABLE KEYS */;
+INSERT INTO `student` VALUES (1,'Allan','D','Guzman',1,2),(2,'Bart','B','Boromeo',2,4),(3,'Charice','P','Pempengco',1,2),(4,'Danica','T','Te',2,2),(5,'Empoy','E','Adarna',1,5),(6,'Frank','F','Fernandez',2,4),(7,'Frank','F','Fernandez',3,1),(8,'Gilbert','G','Gomez',4,2),(9,'Hannah','H','Horandeza',3,3),(10,'Inigo','I','Indevida',4,4),(11,'Jason','J','Jipos',3,2),(12,'Zaldy','Z','Zerox',4,5);
 /*!40000 ALTER TABLE `student` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -161,7 +149,7 @@ CREATE TABLE `subject` (
   KEY `courseOfClass` (`courseOfClass`),
   CONSTRAINT `subject_ibfk_1` FOREIGN KEY (`profID`) REFERENCES `professor` (`profID`),
   CONSTRAINT `subject_ibfk_2` FOREIGN KEY (`courseOfClass`) REFERENCES `course` (`courseID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -170,8 +158,23 @@ CREATE TABLE `subject` (
 
 LOCK TABLES `subject` WRITE;
 /*!40000 ALTER TABLE `subject` DISABLE KEYS */;
+INSERT INTO `subject` VALUES (1,'PE4',1,1),(2,'NS201',2,2),(3,'IT332',3,1),(4,'MTH501',3,3),(5,'DES112',3,4),(6,'HIST69',3,1),(7,'ENG202',2,3),(8,'RECESS',1,3),(9,'DRAW10',2,2),(10,'FIL2A',3,2);
 /*!40000 ALTER TABLE `subject` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Temporary view structure for view `view_professorlist`
+--
+
+DROP TABLE IF EXISTS `view_professorlist`;
+/*!50001 DROP VIEW IF EXISTS `view_professorlist`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `view_professorlist` AS SELECT 
+ 1 AS `First Name`,
+ 1 AS `Middle Initial`,
+ 1 AS `Last Name`*/;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping routines for database 'gradingsystem'
@@ -180,11 +183,11 @@ UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8mb4 */ ;
-/*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` FUNCTION `getGrade`(`studID` INT, `subjID` INT) RETURNS varchar(1) CHARSET utf8
 BEGIN
@@ -209,8 +212,38 @@ DECLARE sqlGrade DOUBLE;
 		else
 		RETURN 'F';
 		END IF;	
+        RETURN 'X';
     END IF;
     
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `addCourse` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addCourse`(
+in inCourseName varchar(40),
+in inMaxYears INTEGER
+)
+BEGIN	
+		
+    INSERT INTO course(courseName,courseMaxYears) VALUES (inCourseName,inMaxYears);		
+    select "successful";
+    
+
+
+
 
 END ;;
 DELIMITER ;
@@ -222,11 +255,11 @@ DELIMITER ;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8mb4 */ ;
-/*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `addGrade`(IN `studID` INTEGER, IN `subjID` INTEGER, IN `profID` INTEGER, IN `inGrade` DOUBLE)
 BEGIN
@@ -240,11 +273,11 @@ BEGIN
     IF (result = 0) THEN
 
 		IF(inGrade >= 50 && inGrade <=100) THEN
-
 			INSERT INTO `gradesheet`(`studentID`,`subjectID`,`profId`,`grade`) VALUES (studID,subjID,profId,inGrade);
-
+			select "success";
 		END IF;
-
+        else select "unsuccessful";
+	
 	END IF;
 
 
@@ -255,15 +288,45 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `addProfessor` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addProfessor`(
+in inFn varchar(50),
+in inMi varchar(6),
+in inLn varchar(50)
+)
+BEGIN	
+	DECLARE result INTEGER;
+	SELECT count(profID) FROM professor WHERE profFirstName LIKE "%inFn%" AND profMiddleInitial LIKE "%inMi%" AND profLastName LIKE "%inLn%";
+    
+    if (result = 0) THEN
+		INSERT INTO professor(profFirstName,profMiddleInitial,profLastName) VALUES (inFn,inMi,inLn);
+        select "success";
+	else select "unsuccessful";
+	end if;
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 /*!50003 DROP PROCEDURE IF EXISTS `addStudent` */;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
 /*!50003 SET @saved_cs_results     = @@character_set_results */ ;
 /*!50003 SET @saved_col_connection = @@collation_connection */ ;
-/*!50003 SET character_set_client  = utf8mb4 */ ;
-/*!50003 SET character_set_results = utf8mb4 */ ;
-/*!50003 SET collation_connection  = utf8mb4_general_ci */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
 /*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
-/*!50003 SET sql_mode              = 'NO_AUTO_VALUE_ON_ZERO' */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` PROCEDURE `addStudent`(IN `fn` VARCHAR(50), IN `mi` VARCHAR(6), IN `ln` VARCHAR(50), IN `inputCourseID` INTEGER, IN `inYear` INTEGER)
 BEGIN
@@ -283,6 +346,7 @@ BEGIN
         `courseTakenID`,`yearStanding`) VALUES
 
         (fn,mi,ln,inputCourseID,inYear);
+        select "successful";
 
         
 
@@ -292,8 +356,10 @@ BEGIN
 
         `courseTakenID`,`yearStanding`) VALUES
 
-        (fn,mi,ln,inputCourseID,inYear);      
-
+        (fn,mi,ln,inputCourseID,inYear); 
+        select "successful";
+	
+    else select "unsuccessful";
     END IF;
 
     
@@ -306,21 +372,48 @@ DELIMITER ;
 /*!50003 SET character_set_client  = @saved_cs_client */ ;
 /*!50003 SET character_set_results = @saved_cs_results */ ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
+/*!50003 DROP PROCEDURE IF EXISTS `addSubject` */;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+CREATE DEFINER=`root`@`localhost` PROCEDURE `addSubject`(
+in inSubjectCode varchar(6),
+in inProfId INTEGER,
+in inCourseId INTEGER
+)
+BEGIN	
+
+	INSERT INTO subject(`subjectCode`,`prodID`,`courseOfClass`) VALUES (inSubjectCode,inProfId,inCourseId);
+
+
+
+END ;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
--- Final view structure for view `professorlist`
+-- Final view structure for view `view_professorlist`
 --
 
-/*!50001 DROP VIEW IF EXISTS `professorlist`*/;
+/*!50001 DROP VIEW IF EXISTS `view_professorlist`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_general_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `professorlist` AS (select `professor`.`profFirstName` AS `First Name`,`professor`.`profMiddleInitial` AS `Middle Initial`,`professor`.`profLastName` AS `Last Name` from `professor`) */;
+/*!50001 VIEW `view_professorlist` AS (select `professor`.`profFirstName` AS `First Name`,`professor`.`profMiddleInitial` AS `Middle Initial`,`professor`.`profLastName` AS `Last Name` from `professor`) */;
 /*!50001 SET character_set_client      = @saved_cs_client */;
 /*!50001 SET character_set_results     = @saved_cs_results */;
 /*!50001 SET collation_connection      = @saved_col_connection */;
@@ -334,4 +427,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-12  7:27:04
+-- Dump completed on 2017-10-15  1:06:58
