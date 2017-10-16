@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="grade_sheet_data_objects" targetNamespace="http://tempuri.org/grade_sheet_data_objects.xsd" xmlns:mstns="http://tempuri.org/grade_sheet_data_objects.xsd" xmlns="http://tempuri.org/grade_sheet_data_objects.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="grade_sheet_importer_connection_string" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="grade_sheet_importer_connection_string (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.UserInterface.Properties.Settings.GlobalReference.Default.grade_sheet_importer_connection_string" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="courseTableAdapter" GeneratorDataComponentClassName="courseTableAdapter" Name="course" UserDataComponentName="courseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="gradingsystem.course" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `courseID`, `courseName`, `courseMaxYears` FROM `course`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="gradesheetTableAdapter" GeneratorDataComponentClassName="gradesheetTableAdapter" Name="gradesheet" UserDataComponentName="gradesheetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="gradingsystem.gradesheet" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `gradeID`, `studentID`, `subjectID`, `profID`, `grade` FROM `gradesheet`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="professorTableAdapter" GeneratorDataComponentClassName="professorTableAdapter" Name="professor" UserDataComponentName="professorTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="gradingsystem.professor" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `profID`, `profFirstName`, `profMiddleInitial`, `profLastName` FROM `professor`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="studentTableAdapter" GeneratorDataComponentClassName="studentTableAdapter" Name="student" UserDataComponentName="studentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="gradingsystem.student" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `studentID`, `studentFirstName`, `studentMiddleInitial`, `studentLastName`, `courseTakenID`, `yearStanding` FROM `student`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="subjectTableAdapter" GeneratorDataComponentClassName="subjectTableAdapter" Name="subject" UserDataComponentName="subjectTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="gradingsystem.subject" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `subjectID`, `subjectCode`, `profID`, `courseOfClass` FROM `subject`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_professorlistTableAdapter" GeneratorDataComponentClassName="view_professorlistTableAdapter" Name="view_professorlist" UserDataComponentName="view_professorlistTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="gradingsystem.view_professorlist" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `First Name`, `Middle Initial`, `Last Name` FROM `gradingsystem`.`view_professorlist`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="grade_sheet_importer_connection_string (Settings)" DbObjectName="`gradingsystem`.`addProfessor`" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="addProfessor" MethodsParameterType="CLR" Modifier="Public" Name="addProfessor" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="addProfessor">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>`gradingsystem`.`addProfessor`</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="inFn" Precision="255" ProviderType="VarChar" Scale="255" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="inMi" Precision="255" ProviderType="VarChar" Scale="255" Size="6" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="inLn" Precision="255" ProviderType="VarChar" Scale="255" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="grade_sheet_data_objects" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="grade_sheet_data_objects" msprop:Generator_UserDSName="grade_sheet_data_objects">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="course" msprop:Generator_TableClassName="courseDataTable" msprop:Generator_TableVarName="tablecourse" msprop:Generator_TablePropName="course" msprop:Generator_RowDeletingName="courseRowDeleting" msprop:Generator_RowChangingName="courseRowChanging" msprop:Generator_RowEvHandlerName="courseRowChangeEventHandler" msprop:Generator_RowDeletedName="courseRowDeleted" msprop:Generator_UserTableName="course" msprop:Generator_RowChangedName="courseRowChanged" msprop:Generator_RowEvArgName="courseRowChangeEvent" msprop:Generator_RowClassName="courseRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="gradesheet" msprop:Generator_TableClassName="gradesheetDataTable" msprop:Generator_TableVarName="tablegradesheet" msprop:Generator_TablePropName="gradesheet" msprop:Generator_RowDeletingName="gradesheetRowDeleting" msprop:Generator_RowChangingName="gradesheetRowChanging" msprop:Generator_RowEvHandlerName="gradesheetRowChangeEventHandler" msprop:Generator_RowDeletedName="gradesheetRowDeleted" msprop:Generator_UserTableName="gradesheet" msprop:Generator_RowChangedName="gradesheetRowChanged" msprop:Generator_RowEvArgName="gradesheetRowChangeEvent" msprop:Generator_RowClassName="gradesheetRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="professor" msprop:Generator_TableClassName="professorDataTable" msprop:Generator_TableVarName="tableprofessor" msprop:Generator_TablePropName="professor" msprop:Generator_RowDeletingName="professorRowDeleting" msprop:Generator_RowChangingName="professorRowChanging" msprop:Generator_RowEvHandlerName="professorRowChangeEventHandler" msprop:Generator_RowDeletedName="professorRowDeleted" msprop:Generator_UserTableName="professor" msprop:Generator_RowChangedName="professorRowChanged" msprop:Generator_RowEvArgName="professorRowChangeEvent" msprop:Generator_RowClassName="professorRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="student" msprop:Generator_TableClassName="studentDataTable" msprop:Generator_TableVarName="tablestudent" msprop:Generator_TablePropName="student" msprop:Generator_RowDeletingName="studentRowDeleting" msprop:Generator_RowChangingName="studentRowChanging" msprop:Generator_RowEvHandlerName="studentRowChangeEventHandler" msprop:Generator_RowDeletedName="studentRowDeleted" msprop:Generator_UserTableName="student" msprop:Generator_RowChangedName="studentRowChanged" msprop:Generator_RowEvArgName="studentRowChangeEvent" msprop:Generator_RowClassName="studentRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="subject" msprop:Generator_TableClassName="subjectDataTable" msprop:Generator_TableVarName="tablesubject" msprop:Generator_TablePropName="subject" msprop:Generator_RowDeletingName="subjectRowDeleting" msprop:Generator_RowChangingName="subjectRowChanging" msprop:Generator_RowEvHandlerName="subjectRowChangeEventHandler" msprop:Generator_RowDeletedName="subjectRowDeleted" msprop:Generator_UserTableName="subject" msprop:Generator_RowChangedName="subjectRowChanged" msprop:Generator_RowEvArgName="subjectRowChangeEvent" msprop:Generator_RowClassName="subjectRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="view_professorlist" msprop:Generator_TableClassName="view_professorlistDataTable" msprop:Generator_TableVarName="tableview_professorlist" msprop:Generator_TablePropName="view_professorlist" msprop:Generator_RowDeletingName="view_professorlistRowDeleting" msprop:Generator_RowChangingName="view_professorlistRowChanging" msprop:Generator_RowEvHandlerName="view_professorlistRowChangeEventHandler" msprop:Generator_RowDeletedName="view_professorlistRowDeleted" msprop:Generator_UserTableName="view_professorlist" msprop:Generator_RowChangedName="view_professorlistRowChanged" msprop:Generator_RowEvArgName="view_professorlistRowChangeEvent" msprop:Generator_RowClassName="view_professorlistRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

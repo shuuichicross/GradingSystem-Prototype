@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,13 +38,16 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.gradingsystemDataSet1 = new UserInterface.gradingsystemDataSet1();
-            this.gradesheetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gradesheetTableAdapter = new UserInterface.gradingsystemDataSet1TableAdapters.gradesheetTableAdapter();
+            this.grade_sheet_data_objects = new UserInterface.grade_sheet_data_objects();
+            this.gradesheetdataobjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.storedprocedureonly = new UserInterface.storedprocedureonly();
+            this.storedprocedureonlyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradingsystemDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradesheetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grade_sheet_data_objects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gradesheetdataobjectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storedprocedureonly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storedprocedureonlyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -100,24 +103,26 @@
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.DataSource = this.storedprocedureonlyBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 110);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(582, 318);
@@ -143,19 +148,25 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Subject";
             // 
-            // gradingsystemDataSet1
+            // grade_sheet_data_objects
             // 
-            this.gradingsystemDataSet1.DataSetName = "gradingsystemDataSet1";
-            this.gradingsystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.grade_sheet_data_objects.DataSetName = "grade_sheet_data_objects";
+            this.grade_sheet_data_objects.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // gradesheetBindingSource
+            // gradesheetdataobjectsBindingSource
             // 
-            this.gradesheetBindingSource.DataMember = "gradesheet";
-            this.gradesheetBindingSource.DataSource = this.gradingsystemDataSet1;
+            this.gradesheetdataobjectsBindingSource.DataSource = this.grade_sheet_data_objects;
+            this.gradesheetdataobjectsBindingSource.Position = 0;
             // 
-            // gradesheetTableAdapter
+            // storedprocedureonly
             // 
-            this.gradesheetTableAdapter.ClearBeforeFill = true;
+            this.storedprocedureonly.DataSetName = "storedprocedureonly";
+            this.storedprocedureonly.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // storedprocedureonlyBindingSource
+            // 
+            this.storedprocedureonlyBindingSource.DataSource = this.storedprocedureonly;
+            this.storedprocedureonlyBindingSource.Position = 0;
             // 
             // GradeSheetImporter
             // 
@@ -175,8 +186,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradingsystemDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gradesheetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grade_sheet_data_objects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gradesheetdataobjectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storedprocedureonly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.storedprocedureonlyBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,8 +204,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
-        private gradingsystemDataSet1 gradingsystemDataSet1;
-        private System.Windows.Forms.BindingSource gradesheetBindingSource;
-        private gradingsystemDataSet1TableAdapters.gradesheetTableAdapter gradesheetTableAdapter;
+        private System.Windows.Forms.BindingSource gradesheetdataobjectsBindingSource;
+        private grade_sheet_data_objects grade_sheet_data_objects;
+        private System.Windows.Forms.BindingSource storedprocedureonlyBindingSource;
+        private storedprocedureonly storedprocedureonly;
     }
 }
