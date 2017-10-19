@@ -66,6 +66,7 @@
             this.btnAddSubject.TabIndex = 5;
             this.btnAddSubject.Text = "Add Subject";
             this.btnAddSubject.UseVisualStyleBackColor = true;
+            this.btnAddSubject.Click += new System.EventHandler(this.btnAddSubject_Click);
             // 
             // btnAddProfessor
             // 
@@ -77,6 +78,7 @@
             this.btnAddProfessor.TabIndex = 4;
             this.btnAddProfessor.Text = "Add Professor";
             this.btnAddProfessor.UseVisualStyleBackColor = true;
+            this.btnAddProfessor.Click += new System.EventHandler(this.btnAddProfessor_Click);
             // 
             // btnAddCourse
             // 
@@ -88,6 +90,7 @@
             this.btnAddCourse.TabIndex = 3;
             this.btnAddCourse.Text = "Add Course";
             this.btnAddCourse.UseVisualStyleBackColor = true;
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
             // 
             // btnStudentInfo
             // 
@@ -110,6 +113,7 @@
             this.btnGradeImport.TabIndex = 1;
             this.btnGradeImport.Text = "Grade Importer";
             this.btnGradeImport.UseVisualStyleBackColor = true;
+            this.btnGradeImport.Click += new System.EventHandler(this.btnGradeImport_Click);
             // 
             // label1
             // 

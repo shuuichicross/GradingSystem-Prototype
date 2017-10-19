@@ -15,7 +15,7 @@ namespace UserInterface
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GradeSheetImporter());
+            Application.Run(new MainMenu());
         }
     }
 }

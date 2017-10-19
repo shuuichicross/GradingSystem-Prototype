@@ -34,7 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>UserInterface.Program</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -183,6 +184,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\log.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentImporterLibrary\StudentImporterLibrary.csproj">
+      <Project>{5dc1d84e-cafd-45d8-9ddb-691682eb45ec}</Project>
+      <Name>StudentImporterLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentInformationLibrary\StudentInformationLibrary.csproj">
+      <Project>{baddf994-2eec-4cd3-9b2d-e80a1115b568}</Project>
+      <Name>StudentInformationLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
